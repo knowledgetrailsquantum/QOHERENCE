@@ -1,38 +1,36 @@
 # Density Matrices and Mixed States (Advanced)
 
-## The limitation of state vectors
-Everything in `01-beginner` and `02-intermediate` describes **pure states** — a qubit whose state is precisely known as a vector |ψ⟩. Real qubits are never perfectly isolated: they interact with their environment (stray electromagnetic fields, thermal photons, imperfect control pulses), and this interaction introduces classical uncertainty on top of quantum uncertainty. A qubit that's "80% likely to be in state |ψ₁⟩ and 20% likely to be in state |ψ₂⟩" (due to noise, not measurement) cannot be written as any single state vector — it needs the **density matrix** formalism.
+## In Plain English
 
-## The density matrix
-A pure state |ψ⟩ corresponds to the density matrix ρ = |ψ⟩⟨ψ|. A **mixed state** — a genuine statistical mixture of several possible pure states |ψᵢ⟩, each with classical probability pᵢ — is ρ = Σᵢ pᵢ|ψᵢ⟩⟨ψᵢ⟩. Density matrices generalize state vectors: every quantum state, pure or mixed, has a density matrix, but not every density matrix corresponds to a single state vector.
+Every idea so far has assumed a qubit is a perfectly isolated spinning coin whose exact spin you could, in principle, describe exactly (even if you can't peek at it without disturbing it). Real qubits are never that clean. They sit in a real physical box — a chip, a vacuum chamber — jostled constantly by stray heat, stray electromagnetic fields, and imperfect control equipment. That jostling doesn't just add quantum uncertainty on top of quantum uncertainty; it adds a second, more mundane kind of uncertainty: honest-to-goodness "I don't know which of several things happened" classical doubt, layered on top.
 
-Key facts used throughout `qoherence-mitigate`:
-- **Trace**: Tr(ρ) = 1 always (total probability is conserved).
-- **Purity**: Tr(ρ²) = 1 for a pure state, and < 1 for a mixed state — this single number is a standard way to quantify "how noisy" a qubit currently is.
-- **Measurement probabilities**: the probability of outcome corresponding to projector P is Tr(Pρ), generalizing |⟨φ|ψ⟩|².
+Here's the distinction that matters. "The coin is spinning evenly, 50/50" (superposition) is one kind of uncertain — a single, well-defined physical situation that happens to have two possible outcomes. "I lost track of whether I spun the coin fairly or gave it a slight heads-favoring flick, and it's now sitting under a cloth" is a completely different kind of uncertain — there genuinely is a fact of the matter about which flick you gave it, you just don't know which. A qubit that's picked up noise from its environment ends up in this second, "mixed" kind of situation: it's not a single, clean superposition anymore, it's an honest statistical blend of *several possible* superpositions, and describing it needs a richer tool than the simple `|ψ⟩ = α|0⟩+β|1⟩` notation from earlier chapters can provide. That richer tool is the **density matrix**.
 
-## Why this matters: decoherence is a mixed-state phenomenon
-"Decoherence" — the loss of quantum information to the environment — is precisely the process by which a pure state's density matrix evolves toward a mixed one. Two standard noise processes, both directly measured and reported on real hardware datasheets from IBM, Google, IonQ, and Rigetti:
+This distinction is not academic hair-splitting — it's the difference between "quantum weirdness" (superposition, which is a feature) and "noise" (mixing, which is a bug that engineers spend enormous effort fighting). Every noise-fighting technique in `qoherence-mitigate` is, underneath, a technique for keeping a qubit's density matrix as close as possible to a clean, pure superposition for as long as possible.
 
-- **T1 (amplitude damping / relaxation time)**: how long it takes, on average, for an excited qubit (|1⟩) to spontaneously decay to |0⟩, losing energy to the environment.
-- **T2 (dephasing time)**: how long it takes for the *phase relationship* between α and β to randomize, destroying superposition information even without necessarily flipping the qubit's measured value.
+## Now With the Math
 
-T1 and T2 are reported in microseconds and are among the first numbers any quantum hardware team publishes about a new chip — they directly bound how deep a circuit can be before results become noise-dominated. Superconducting qubits (IBM, Google, Rigetti) typically report T1/T2 in the tens to low hundreds of microseconds range; trapped-ion qubits (IonQ, Quantinuum) can have coherence times of seconds or more, a major reason they achieve higher-fidelity two-qubit gates despite slower gate speeds.
+**The density matrix, `ρ`.** A clean state `|ψ⟩` corresponds to the density matrix `ρ = |ψ⟩⟨ψ|` (multiplying the ket by its own bra — a way of writing "this exact state" that turns out to generalize gracefully to the messy case). A genuinely mixed state — probability `p₁` of secretly being in state `|ψ₁⟩`, probability `p₂` of secretly being in `|ψ₂⟩`, and so on — is written `ρ = Σᵢ pᵢ|ψᵢ⟩⟨ψᵢ⟩`. The `Σ` (capital Greek sigma) just means "add up the following term for every value of the index `i`" — standard summation notation, no different in spirit from writing `1+2+3` as `Σ` from 1 to 3.
 
-## Analogy: a clean photograph vs. a double exposure
-A pure state is like a single, sharp photograph — perfectly determined, even though you can't fully "see" it without measuring (destructively). A mixed state is like a double- or triple-exposed photograph — a genuine blend of several possible sharp photographs, where you've lost track of which one is "really" underneath. No amount of staring at the blended photo alone can un-blend it; you'd need outside information (like knowing the mixing probabilities) that the photo itself doesn't fully encode.
+**Trace, `Tr(ρ) = 1`.** The "trace" of a matrix means "add up the numbers running down its diagonal." For any legitimate density matrix, this always equals 1 — the matrix version of "all the probabilities must add up to 100%" from the very first chapter of this repo, now stated in a form that works whether the state is clean or mixed.
 
-## Partial trace: describing part of an entangled system
-If two qubits are entangled and you only care about qubit A, you compute the **partial trace** over qubit B to get qubit A's **reduced density matrix**. A striking and important fact: for a maximally entangled pair (like the Bell pair from earlier docs), each individual qubit's reduced density matrix is *maximally mixed* — it looks completely random on its own, even though the pair together is in a perfectly well-defined pure state. This is the formal statement of "entanglement information lives in the correlations, not in either qubit individually," referenced informally in `01-beginner/02-superposition-and-entanglement.md`.
+**Purity, `Tr(ρ²) = 1` for clean, `< 1` for mixed.** Multiply the density matrix by itself, take the trace, and you get a single number that tells you how "clean" the state currently is: exactly 1 for a perfectly clean superposition, and strictly less than 1 the moment any real-world mixing has crept in. This one number is the standard, everyday way engineers quantify "how noisy is this qubit right now."
+
+**T1 and T2 — the two clocks that measure noise creeping in.** **T1** (relaxation time) measures, on average, how long it takes an excited qubit to spontaneously decay and lose its energy to the surroundings. **T2** (dephasing time) measures how long it takes the delicate phase relationship between `α` and `β` to get scrambled by noise, even without the qubit's energy level flipping. Both are measured in microseconds and are among the very first numbers any hardware team publishes about a new chip, because they directly bound how deep a circuit can be before noise, not the algorithm's own logic, dominates the result.
+
+**Partial trace — describing half of an entangled pair.** If two qubits are entangled and you only care about one of them, you compute its **reduced density matrix** by "tracing out" the other qubit — mathematically summing away the parts of the description that refer only to the qubit you're ignoring. A striking fact that follows directly from this: for a maximally entangled Bell pair, each individual qubit's reduced density matrix looks *completely random* on its own — purity less than 1, even though the pair together is in a perfectly clean, well-defined state. This is the symbol-level confirmation of something said in plain terms back in `01-beginner/02-superposition-and-entanglement.md`: entanglement's information lives in the relationship between qubits, not in either qubit's individual diary.
 
 ## In code (conceptually)
 ```python
 import numpy as np
-# Maximally mixed single qubit: 50% |0>, 50% |1>, classically
+# Maximally mixed single qubit: 50% |0>, 50% |1>, classically -- not superposition, genuine noise-driven doubt
 rho = 0.5 * np.array([[1, 0], [0, 0]]) + 0.5 * np.array([[0, 0], [0, 1]])
 print(rho)          # [[0.5, 0], [0, 0.5]]
-print(np.trace(rho @ rho))  # 0.5 -- less than 1, confirming it's mixed
+print(np.trace(rho @ rho))  # 0.5 -- less than 1, confirming it's mixed, not a clean superposition
 ```
 
+## Real-world numbers
+Superconducting qubits (IBM, Google, Rigetti) typically report T1/T2 in the tens to low hundreds of microseconds; trapped-ion qubits (IonQ, Quantinuum) can have coherence times of seconds or more — a major reason they achieve higher-fidelity two-qubit gates despite slower gate speeds.
+
 ## Next
-Read `03-complexity-theory.md` to see how these physical realities connect to the theoretical question of *what* quantum computers can and can't speed up — and why "quantum computers solve NP-complete problems instantly" is a popular myth this doc will debunk.
+Read `03-complexity-theory.md` to see how these physical realities connect to the theoretical question of *what* quantum computers can and can't speed up — and why "quantum computers solve every hard problem instantly" is a popular myth this doc will debunk.

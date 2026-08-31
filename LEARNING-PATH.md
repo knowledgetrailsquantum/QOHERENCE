@@ -27,3 +27,6 @@ Once you've read `qoherence-core`'s beginner tier, `qoherence-docs/docs/industry
 
 ## What changed in this expansion
 Every tiered doc across all six repos was substantially expanded from short reference notes into in-depth explanations with worked analogies (and each analogy's limits), step-by-step mechanisms, concrete numbers, and grounding in real IBM/Google/Microsoft/IonQ/Quantinuum/Rigetti/Amazon/PsiQuantum hardware and roadmaps as of 2025-2026. A new `qoherence-docs/docs/industry-landscape.md` ties the whole set together industry-wide.
+
+## Explanation style
+Every doc with real mathematical notation now follows a two-part structure, styled after *Quantum Computing For Dummies* (Hurley & Smith): an "In Plain English" section first — analogies (spinning coins, foggy mountain hikes, tuning a radio, whispered messages down a line) with no symbols at all — followed by a "Now With the Math" section that walks through the actual notation (kets, amplitudes, matrices, Greek letters) symbol by symbol, always tying each one back to the plain-English picture that came before it. Docs that were already narrative and light on notation (most of `qoherence-hardware` and parts of `qoherence-sim`/`qoherence-mitigate`) were left as-is since they already match this approach.
