@@ -1,22 +1,14 @@
-# Error Correction & Mitigation
+# Error Mitigation & Correction Overview
 
-## Surface Codes (`surface_code.py`)
-A topological quantum error-correcting code that encodes one logical qubit
-across many physical qubits arranged on a 2D lattice. Errors are detected
-via syndrome measurements and corrected without disturbing encoded data.
-Code `distance` determines how many errors can be corrected.
+qoherence-mitigate spans both near-term error mitigation (usable on today's noisy hardware, no extra qubits) and longer-term quantum error correction (needs many extra physical qubits per logical qubit, but scales to arbitrarily low error rates below threshold).
 
-## Zero-Noise Extrapolation — ZNE (`zne.py`)
-A mitigation technique (not full correction) that runs the same circuit at
-artificially scaled noise levels, then extrapolates results back to the
-zero-noise limit. Useful on near-term (NISQ) hardware without full QEC.
+| Technique | File | Category | Extra qubits needed? |
+|---|---|---|---|
+| Readout error correction | `src/readout_correction.py` | Mitigation | No |
+| Zero-noise extrapolation | `src/zne.py` | Mitigation | No |
+| Surface code | `src/surface_code.py` | Correction | Yes, substantial (~1,000+ physical per logical) |
 
-## Readout Error Correction (`readout_correction.py`)
-Corrects measurement (readout) errors using a calibration matrix built from
-known reference states, inverting the matrix to recover true probabilities.
+Full conceptual grounding: `01-beginner/01-why-quantum-computers-need-error-handling.md` → `02-intermediate/01-mitigation-vs-correction.md` → `03-advanced/01-stabilizer-codes.md` → `04-expert/01-implementing-a-decoder.md`.
 
-## Correction vs. Mitigation
-- **Correction** (surface codes): actively fixes errors during computation,
-  requires significant qubit overhead.
-- **Mitigation** (ZNE, readout correction): statistically compensates for
-  errors post-hoc, cheaper but less robust than full QEC.
+## The one-paragraph mental model
+Mitigation cleans up noisy results after the fact using statistics and classical post-processing; correction actively detects and fixes errors mid-computation using redundant encoding — and the field currently needs both, at different scales, because today's hardware can't yet support correction at the scale fault-tolerant algorithms require, while mitigation alone can't scale to those algorithms' circuit depths. See `qoherence-core/docs/04-expert/01-fault-tolerant-computation.md` for how this connects to the industry's fault-tolerance roadmaps (IBM, Google, Microsoft, IonQ/Quantinuum).

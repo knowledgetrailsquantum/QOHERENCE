@@ -1,32 +1,23 @@
-# Fault-Tolerant Quantum Computation (Expert)
+# Fault-Tolerant Computation (Expert)
+
+## The gap between "a qubit" and "a useful qubit"
+Every doc up to this point has (mostly) treated qubits as ideal. Real qubits have gate error rates typically in the range of 10⁻² to 10⁻³ per operation on today's best hardware (superconducting two-qubit gates commonly around 99.5–99.9% fidelity as of 2025–2026; trapped-ion gates often above 99.9%). That sounds impressive until you multiply: a circuit with 1,000 sequential two-qubit gates at 99.9% fidelity each retains only 0.999¹⁰⁰⁰ ≈ 37% of its ideal fidelity — and useful algorithms like Shor's factoring a cryptographically-relevant key need circuits with millions to billions of gates. Without error correction, the noise compounds catastrophically long before the answer emerges. This is the entire reason `qoherence-mitigate` exists as a separate repo, and why "fault tolerance" is the field's central unsolved engineering challenge.
+
+## Logical qubits: the unit that actually matters
+A **logical qubit** is an error-corrected qubit built by encoding one unit of quantum information redundantly across many **physical qubits**, using a quantum error-correcting code (see `qoherence-mitigate/docs/03-advanced/01-stabilizer-codes.md` for the surface code specifically). The overhead is severe: current estimates for the leading candidate code (the surface code) suggest roughly 1,000+ physical qubits may be needed per logical qubit at today's physical error rates to achieve error rates low enough for large-scale algorithms — though this ratio improves as physical qubit fidelity improves, and is the subject of intense ongoing hardware and code-design research (including newer codes like quantum LDPC codes that promise much lower overhead).
 
 ## The threshold theorem
-If physical error rates are below a certain threshold (roughly ~1% for
-surface codes, depending on architecture), arbitrarily long quantum
-computations become possible by encoding logical qubits redundantly and
-correcting errors faster than they accumulate. This is the theoretical
-basis that makes large-scale quantum computing plausible at all.
+The single most important theoretical result underpinning the entire field's optimism: the **quantum threshold theorem** states that if physical error rates are below a certain threshold (roughly ~1% for the surface code, though the practical number depends on code and architecture details), then increasing the number of physical qubits per logical qubit can drive the *logical* error rate down arbitrarily, rather than up. Below threshold, more redundancy helps; above threshold, more redundancy just adds more ways to fail. Google's Willow chip result in December 2024 was significant precisely because it was the first clear experimental demonstration of *below-threshold scaling* in a real superconducting device — logical error rate roughly halved with each increase in surface-code size, matching theoretical prediction rather than degrading.
 
-## Logical vs physical qubits
-Current NISQ (Noisy Intermediate-Scale Quantum) devices manipulate physical
-qubits directly, with no error correction — hence the heavy reliance on
-mitigation techniques (see qoherence-mitigate). Fault-tolerant computation
-requires encoding one logical qubit across many (often 100s-1000s of)
-physical qubits, depending on the code and target error rate.
+## Where the major players are on the roadmap (as of 2025–2026)
+- **IBM** has published a roadmap targeting fault-tolerant, error-corrected systems with hundreds of logical qubits later this decade, alongside near-term "quantum-centric supercomputing" that pairs noisy quantum processors with classical HPC and error mitigation (see `qoherence-mitigate`) rather than waiting for full fault tolerance.
+- **Google Quantum AI** has focused heavily on demonstrating the surface code's below-threshold behavior (Willow) as the prerequisite proof point before scaling logical qubit count, framing its roadmap in stages toward a single reliable, scalable logical qubit and then many.
+- **Microsoft** has pursued a different physical bet — topological qubits (using exotic quasiparticles called Majorana zero modes) that are theoretically more inherently error-resistant at the hardware level, potentially reducing the physical-to-logical qubit overhead dramatically; Microsoft's Azure Quantum also offers access to multiple third-party hardware backends (IonQ, Quantinuum, Rigetti, Pasqal) rather than being purely a single-hardware bet, alongside its own topological qubit research (with a 2025 claimed device, Majorana 1, that drew significant scientific debate over the strength of its evidence).
+- **IonQ and Quantinuum** (trapped-ion) emphasize their high native gate fidelities as reducing the error-correction overhead needed relative to superconducting approaches, arguing fewer physical qubits per logical qubit will be needed on their platform.
+- **Amazon (AWS Braket)** and **PsiQuantum** are notable for photonic-qubit approaches, betting on qubits that don't require dilution-refrigerator cooling and can, in principle, leverage semiconductor fabrication techniques for manufacturing scale.
 
-## Magic state distillation
-Certain gates (like the T gate) needed for universal computation cannot be
-implemented "for free" within many stabilizer error-correcting codes and
-require expensive resource states called magic states, purified via
-distillation protocols — a major overhead driver in fault-tolerant designs.
+## Analogy: RAID for qubits, with a twist
+Classical fault tolerance (like RAID disk redundancy, or error-correcting memory/ECC RAM) also spreads information redundantly to survive individual failures. The twist in the quantum case: you cannot simply "copy" a qubit's state to create redundancy, because of the **no-cloning theorem** (an unknown quantum state cannot be perfectly copied — a direct consequence of unitarity/linearity). Quantum error correction instead spreads information *non-locally* across entangled physical qubits in a way that lets you detect and correct certain error patterns (via **syndrome measurements** that reveal what kind of error occurred without directly measuring, and thus destroying, the encoded logical information) without ever needing to know or copy the logical state itself.
 
-## Where this connects across Qoherence
-- qoherence-mitigate implements NISQ-era mitigation (ZNE, readout
-  correction) and toy surface-code logic — a stepping stone toward
-  full fault tolerance.
-- qoherence-hardware's backend abstraction is designed to be extensible
-  toward future fault-tolerant hardware backends as they mature.
-
-## Further reading
-Fowler et al., "Surface codes: Towards practical large-scale quantum
-computation" (2012).
+## Next
+Read `02-extending-qoherence-core.md` for how to extend this library's data structures to support new gate types or larger simulation backends, and `qoherence-mitigate/docs` for the error-correction and mitigation techniques referenced throughout this doc in depth.

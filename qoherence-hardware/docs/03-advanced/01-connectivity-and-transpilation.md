@@ -1,8 +1,23 @@
-# Connectivity & Transpilation (Advanced)
+# Connectivity and Transpilation (Advanced)
 
-Real devices don't have all-to-all qubit connectivity — two-qubit gates
-only work between physically coupled qubits. **Transpilation** rewrites a
-logical circuit to fit hardware topology, inserting SWAP gates as needed,
-which adds depth and noise. Backend adapters in qoherence-hardware should
-eventually integrate provider-specific transpilers (Qiskit, pyQuil) before
-submission.
+## The connectivity problem
+A circuit composed at the logical level (per `qoherence-core/docs/02-intermediate/03-circuit-composition.md`) often assumes any qubit can be entangled with any other via a two-qubit gate. Real hardware rarely offers this. Superconducting chips (IBM, Google, Rigetti) have qubits wired in a fixed physical layout — a 2D grid, a heavy-hex lattice (IBM's specific topology choice, designed to balance connectivity against manufacturing yield and error-correction compatibility), or similar — where a two-qubit gate can only be applied directly between physically adjacent qubits. Trapped-ion systems are a notable exception: because ions can be reordered or interact via shared vibrational modes, IonQ and Quantinuum systems offer effectively **all-to-all connectivity**, a genuine architectural advantage that reduces (though doesn't eliminate) the transpilation overhead described below.
+
+## Transpilation, step by step
+Converting a logical circuit into something a specific device can run natively is called **transpilation** (a term borrowed and repurposed from cross-language classical compilation). The major stages, common across IBM's Qiskit, Google's Cirq, and other vendor toolchains:
+1. **Qubit mapping (layout)**: choose which physical qubits will represent the circuit's logical qubits, ideally minimizing the distance between logical qubits that need to interact.
+2. **Routing**: for any two-qubit gate between logical qubits not adjacent on the physical chip, insert a sequence of SWAP gates to physically move quantum information until the two operands are adjacent — each SWAP itself typically costs 3 CNOT-equivalent operations, so poor routing can dramatically inflate circuit depth and, correspondingly, error.
+3. **Gate decomposition (basis translation)**: rewrite the circuit's gates in terms of the device's native gate set — e.g., decomposing an arbitrary single-qubit rotation into the device's specific supported rotation gates, or decomposing a Toffoli gate (used commonly in arithmetic circuits like Shor's modular exponentiation) into the device's native two-qubit gates plus single-qubit gates.
+4. **Optimization passes**: cancel adjacent inverse gate pairs, merge consecutive rotations, and otherwise reduce gate count and depth without changing the circuit's logical effect — this step can meaningfully reduce error even though it doesn't change *what* the circuit computes, purely by shortening how long the noisy hardware has to hold the state coherently.
+
+## Why connectivity is a first-class hardware design decision
+Chip designers face a genuine trade-off: more physical connections per qubit (higher "degree" in the connectivity graph) generally means better routing efficiency (less SWAP overhead) but also more cross-talk and control complexity, and can conflict with the specific connectivity patterns favored by error-correction codes. IBM's heavy-hex lattice, for instance, was explicitly chosen partly because it's compatible with the connectivity requirements of the surface code (see `qoherence-mitigate/docs/03-advanced/01-stabilizer-codes.md`) while limiting each qubit's neighbor count to reduce cross-talk.
+
+## Analogy: transpilation as a moving-company logistics problem
+Think of a logical circuit as a list of "these two people need to shake hands" instructions, and a physical chip's connectivity as a seating chart where only adjacent seats can shake hands directly. Transpilation is the seating-chart optimization (mapping) plus the process of physically moving people between chairs when the seating chart doesn't allow a needed handshake directly (routing) — and every move costs time and risk (SWAP-induced error), so a good transpiler is one that minimizes total movement, the same way a good moving company minimizes truck trips.
+
+## Measuring transpilation quality
+Two circuits that are logically identical can have wildly different **transpiled depth** and gate count depending on the target device's connectivity and how good the transpiler's mapping/routing heuristics are — this is why the *same* algorithm can perform very differently across hardware vendors even at similar raw qubit counts and gate fidelities, and why IBM's "quantum volume" and newer "CLOPS" (circuit layer operations per second) metrics try to capture this practically, rather than reporting qubit count alone.
+
+## Next
+Read `04-expert/01-building-a-custom-backend.md` for how `qoherence-hardware`'s backend adapter interfaces (`src/ibm_backend.py`, `src/ionq_backend.py`, `src/rigetti_backend.py`) map circuits to specific real vendor APIs.

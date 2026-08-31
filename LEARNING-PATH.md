@@ -21,3 +21,9 @@ Each repo's docs/ folder is split into:
 - `02-intermediate/` — comfortable with beginner material
 - `03-advanced/` — comfortable with linear algebra / complexity theory
 - `04-expert/` — research-level / contribution-oriented
+
+## Industry context
+Once you've read `qoherence-core`'s beginner tier, `qoherence-docs/docs/industry-landscape.md` gives real-world grounding — how IBM, Google, Microsoft, IonQ, Quantinuum, Rigetti, Amazon, PsiQuantum and others' hardware, roadmaps, and public milestones connect to the concepts in these repos. Read it early for motivation, and revisit it after `qoherence-hardware` and `qoherence-mitigate` for full technical context.
+
+## What changed in this expansion
+Every tiered doc across all six repos was substantially expanded from short reference notes into in-depth explanations with worked analogies (and each analogy's limits), step-by-step mechanisms, concrete numbers, and grounding in real IBM/Google/Microsoft/IonQ/Quantinuum/Rigetti/Amazon/PsiQuantum hardware and roadmaps as of 2025-2026. A new `qoherence-docs/docs/industry-landscape.md` ties the whole set together industry-wide.

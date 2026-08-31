@@ -39,3 +39,15 @@ that every other Qoherence repo builds on:
 - qoherence-sim executes these circuits classically
 - qoherence-hardware submits these circuits to real devices
 - qoherence-mitigate operates on the results returned from execution
+
+## Deeper dive
+Each concept above has a full standalone doc with analogies, worked examples, and industry context:
+- Qubit & measurement: `01-beginner/01-what-is-a-qubit.md`
+- Superposition & entanglement: `01-beginner/02-superposition-and-entanglement.md`
+- Gates & circuits: `01-beginner/03-gates-and-circuits.md`
+- Multi-qubit systems & the exponential state space: `02-intermediate/01-multi-qubit-systems.md`
+- Linear algebra machinery: `02-intermediate/02-linear-algebra-foundations.md`
+- QFT, density matrices, complexity theory: `03-advanced/`
+- Fault tolerance: `04-expert/01-fault-tolerant-computation.md`
+
+For how these concepts map onto real hardware from IBM, Google, Microsoft, IonQ, Rigetti and others, see `qoherence-hardware/docs` and `qoherence-docs/docs/industry-landscape.md`.

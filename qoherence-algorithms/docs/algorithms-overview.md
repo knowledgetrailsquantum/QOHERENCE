@@ -1,29 +1,23 @@
 # Algorithms Overview
 
-## Grover's Search (`grover.py`)
-Provides quadratic speedup for unstructured search. Given an oracle that
-marks a target item among N, Grover's algorithm finds it in O(sqrt(N))
-queries instead of O(N) classically, via repeated amplitude amplification.
+qoherence-algorithms implements four algorithms spanning the field's two eras — fault-tolerant-era (Grover, Shor) and NISQ-era (VQE, QAOA). Full depth, analogies, and industry context live in the tiered docs:
 
-## Shor's Factoring (`shor.py`)
-Factors large integers exponentially faster than the best known classical
-algorithms by finding the period of a modular exponentiation function using
-the quantum Fourier transform. Threatens RSA-style cryptography at scale.
+| Algorithm | Tier | Doc | Speedup type | Era |
+|---|---|---|---|---|
+| Why quantum algorithms exist at all | Beginner | `01-beginner/01-why-algorithms-need-quantum.md` | — | — |
+| Grover's search | Intermediate | `02-intermediate/01-grover-and-shor-explained.md` | Proven quadratic | Fault-tolerant |
+| Shor's factoring | Intermediate | `02-intermediate/01-grover-and-shor-explained.md` | Believed exponential | Fault-tolerant |
+| VQE (ground-state energy) | Advanced | `03-advanced/01-vqe-and-qaoa-theory.md` | Problem-dependent | NISQ |
+| QAOA (combinatorial optimization) | Advanced | `03-advanced/01-vqe-and-qaoa-theory.md` | Problem-dependent | NISQ |
+| Shor's period-finding, implementation detail | Expert | `04-expert/01-implementing-shors-period-finding.md` | — | Fault-tolerant |
 
-## Variational Quantum Eigensolver — VQE (`vqe.py`)
-A hybrid quantum-classical algorithm for finding the ground-state energy of
-a Hamiltonian. A parameterized quantum circuit (ansatz) is optimized
-classically to minimize expected energy. Popular for quantum chemistry.
+## Source-to-doc map
+- `src/grover.py` ↔ `02-intermediate/01-grover-and-shor-explained.md`
+- `src/shor.py` ↔ `02-intermediate/01-grover-and-shor-explained.md` + `04-expert/01-implementing-shors-period-finding.md`
+- `src/vqe.py`, `src/qaoa.py` ↔ `03-advanced/01-vqe-and-qaoa-theory.md`
 
-## QAOA (`qaoa.py`)
-Quantum Approximate Optimization Algorithm — a hybrid algorithm for
-combinatorial optimization problems (e.g. Max-Cut). Alternates between a
-cost Hamiltonian and mixer Hamiltonian across `p` layers, tuned classically.
+## Who's using what, in practice (2025–2026)
+VQE- and QAOA-family algorithms dominate real pilot deployments (IBM Quantum Network partners, Google's chemistry research collaborations, Microsoft Azure Quantum Elements customers, IonQ and Quantinuum enterprise pilots in finance and logistics) because they tolerate current noise levels. Grover's and Shor's remain primarily research and roadmap-planning topics — see `04-expert/01-implementing-shors-period-finding.md` for why the resource gap to practical Shor's is still enormous.
 
-## When to Use What
-| Algorithm | Problem Type            | Speedup           |
-|-----------|--------------------------|-------------------|
-| Grover    | Unstructured search      | Quadratic         |
-| Shor      | Integer factoring        | Exponential       |
-| VQE       | Ground-state energy      | Heuristic/hybrid  |
-| QAOA      | Combinatorial optimization | Heuristic/hybrid |
+## Next
+See `qoherence-hardware/docs` for how these algorithms map onto specific physical qubit technologies, and `qoherence-bench/docs` for how to rigorously measure and compare their performance.
