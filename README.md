@@ -23,6 +23,7 @@ Start with `LEARNING-PATH.md` for the full recommended reading order. This READM
 | 5 | [`qoherence-mitigate`](qoherence-mitigate/) | Error mitigation and error correction | [why error handling](qoherence-mitigate/docs/01-beginner/01-why-quantum-computers-need-error-handling.md) |
 | 6 | [`qoherence-bench`](qoherence-bench/) | Rigorous, statistically sound benchmarking across all of the above | [what is benchmarking](qoherence-bench/docs/01-beginner/01-what-is-benchmarking.md) |
 | — | [`qoherence-docs`](qoherence-docs/) | Cross-repo architecture and industry context | [architecture](qoherence-docs/docs/architecture.md) · [industry landscape](qoherence-docs/docs/industry-landscape.md) |
+| — | [`qoherence-ai`](qoherence-ai/) | Quantum machine learning + quantum-inspired classical AI | [what is quantum AI](qoherence-ai/docs/01-beginner/01-what-is-quantum-ai.md) |
 
 See [`qoherence-docs/docs/architecture.md`](qoherence-docs/docs/architecture.md) for exactly how these six repos depend on and feed into each other (a diagram + data-flow walkthrough).
 
@@ -79,6 +80,12 @@ Every repo's docs follow the same four-tier structure: `01-beginner/` (no prior 
 - [Industry landscape](qoherence-docs/docs/industry-landscape.md) — IBM, Google, Microsoft, IonQ, Quantinuum, Rigetti, Amazon, PsiQuantum: real roadmaps, real milestones, and how to tell progress from hype
 - [Applications by industry](qoherence-docs/docs/applications-by-industry.md) — cybersecurity/QKD, finance, chemistry & healthcare, logistics: what's real today vs. still a pilot
 - [Ethics, society & economics](qoherence-docs/docs/ethics-and-society.md) — jobs, post-quantum cryptography policy, access & inequality, scientific overclaiming — the final page of the trail
+
+### qoherence-ai — quantum machine learning and quantum-inspired classical AI
+- Beginner: [what is quantum AI](qoherence-ai/docs/01-beginner/01-what-is-quantum-ai.md) → [how classical ML works (recap)](qoherence-ai/docs/01-beginner/02-how-classical-ml-works-recap.md) → [why quantum might help AI](qoherence-ai/docs/01-beginner/03-why-quantum-might-help-ai.md)
+- Intermediate: [variational quantum classifiers](qoherence-ai/docs/02-intermediate/01-variational-quantum-classifiers.md) → [quantum kernels](qoherence-ai/docs/02-intermediate/02-quantum-kernels.md) → [quantum-inspired optimization](qoherence-ai/docs/02-intermediate/03-quantum-inspired-optimization.md) → [tensor networks for ML](qoherence-ai/docs/02-intermediate/04-tensor-networks-for-ml.md)
+- Advanced: [quantum neural networks](qoherence-ai/docs/03-advanced/01-quantum-neural-networks.md) → [hybrid training loops](qoherence-ai/docs/03-advanced/02-hybrid-training-loops.md) → [barren plateaus](qoherence-ai/docs/03-advanced/03-barren-plateaus.md) → [benchmarking QML vs. classical](qoherence-ai/docs/03-advanced/04-benchmarking-qml-vs-classical.md)
+- Expert: [industry case studies](qoherence-ai/docs/04-expert/01-industry-case-studies.md) → [research frontiers](qoherence-ai/docs/04-expert/02-research-frontiers.md) → [hype check and limitations](qoherence-ai/docs/04-expert/03-hype-check-and-limitations.md) → [future outlook](qoherence-ai/docs/04-expert/04-future-outlook.md) — the final page of the trail
 
 ## Full reading order
 See [`LEARNING-PATH.md`](LEARNING-PATH.md) for the complete tier-by-tier plan across all six repos, and what changed in the most recent expansion of this doc set.

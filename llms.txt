@@ -1,0 +1,94 @@
+# Qoherence
+
+> Qoherence is an end-to-end, expert-level educational repo set on quantum computing and quantum/quantum-inspired AI — grounded in real hardware (IBM, Google, Microsoft, IonQ, Rigetti) and real industry practice. Every page explains ideas in plain English with analogies first, then introduces the math with every symbol explained, then gives real history. Pages are organized into eight sibling repos, each tiered 01-beginner → 02-intermediate → 03-advanced → 04-expert, and chained together into one continuous Prev/Next trail anchored at the root README.
+
+Start at the root [README](README.md) (navigation hub) or [LEARNING-PATH](LEARNING-PATH.md) (recommended reading order). The trail begins at qoherence-core's history page and ends at qoherence-ai's future-outlook page.
+
+## qoherence-core — qubits, gates, and the math of quantum computing
+
+- [A History of Quantum Mechanics — and How It Became a Computer](qoherence-core/docs/00-history-of-quantum-mechanics.md): the true first page of the whole trail — Planck to Shor, plus how qubits are physically built today.
+- [What Is a Qubit?](qoherence-core/docs/01-beginner/01-what-is-a-qubit.md)
+- [Superposition and Entanglement](qoherence-core/docs/01-beginner/02-superposition-and-entanglement.md)
+- [Gates and Circuits](qoherence-core/docs/01-beginner/03-gates-and-circuits.md)
+- [Multi-Qubit Systems](qoherence-core/docs/02-intermediate/01-multi-qubit-systems.md)
+- [Linear Algebra Foundations](qoherence-core/docs/02-intermediate/02-linear-algebra-foundations.md)
+- [Circuit Composition](qoherence-core/docs/02-intermediate/03-circuit-composition.md)
+- [Reversible Computing](qoherence-core/docs/02-intermediate/04-reversible-computing.md)
+- [Quantum Fourier Transform](qoherence-core/docs/03-advanced/01-quantum-fourier-transform.md)
+- [Density Matrices and Mixed States](qoherence-core/docs/03-advanced/02-density-matrices-and-mixed-states.md)
+- [Complexity Theory for Quantum Computing](qoherence-core/docs/03-advanced/03-complexity-theory.md)
+- [Phase Estimation](qoherence-core/docs/03-advanced/04-phase-estimation.md)
+- [Fault-Tolerant Computation](qoherence-core/docs/04-expert/01-fault-tolerant-computation.md)
+- [Extending qoherence-core](qoherence-core/docs/04-expert/02-extending-qoherence-core.md)
+- [Core Concepts](qoherence-core/docs/concepts.md) and [API Reference](qoherence-core/docs/api-reference.md)
+
+## qoherence-algorithms — the algorithms that make quantum computing useful
+
+- [Why Algorithms Need Quantum](qoherence-algorithms/docs/01-beginner/01-why-algorithms-need-quantum.md)
+- [Grover's and Shor's Algorithms Explained](qoherence-algorithms/docs/02-intermediate/01-grover-and-shor-explained.md)
+- [VQE and QAOA Theory](qoherence-algorithms/docs/03-advanced/01-vqe-and-qaoa-theory.md)
+- [Implementing Shor's Period-Finding](qoherence-algorithms/docs/04-expert/01-implementing-shors-period-finding.md)
+- [A Worked Example: Grover's Algorithm on the N-Queens Puzzle](qoherence-algorithms/docs/04-expert/02-worked-example-grover-n-queens.md)
+- [Algorithms Overview](qoherence-algorithms/docs/algorithms-overview.md)
+
+## qoherence-hardware — how qubits are physically built and run today
+
+- [What Is Real Quantum Hardware?](qoherence-hardware/docs/01-beginner/01-what-is-real-quantum-hardware.md)
+- [Qubit Technologies Compared](qoherence-hardware/docs/02-intermediate/01-qubit-technologies.md): superconducting, trapped-ion, neutral-atom, topological, photonic.
+- [Connectivity and Transpilation](qoherence-hardware/docs/03-advanced/01-connectivity-and-transpilation.md)
+- [Building a Custom Backend](qoherence-hardware/docs/04-expert/01-building-a-custom-backend.md)
+- [Hardware Backends Overview](qoherence-hardware/docs/backends.md)
+
+## qoherence-sim — simulating quantum computers on classical machines
+
+- [Why Simulate Quantum Computers?](qoherence-sim/docs/01-beginner/01-why-simulate-quantum-computers.md)
+- [State-Vector Simulation Limits](qoherence-sim/docs/02-intermediate/01-state-vector-limits.md)
+- [Tensor Network Methods](qoherence-sim/docs/03-advanced/01-tensor-network-methods.md)
+- [GPU-Accelerated Simulation](qoherence-sim/docs/04-expert/01-gpu-accelerated-simulation.md)
+- [Simulators Overview](qoherence-sim/docs/simulators.md)
+
+## qoherence-mitigate — living with noisy qubits: mitigation and correction
+
+- [Why Quantum Computers Need Error Handling](qoherence-mitigate/docs/01-beginner/01-why-quantum-computers-need-error-handling.md)
+- [Mitigation vs. Correction](qoherence-mitigate/docs/02-intermediate/01-mitigation-vs-correction.md)
+- [Stabilizer Codes](qoherence-mitigate/docs/03-advanced/01-stabilizer-codes.md)
+- [Implementing a Decoder](qoherence-mitigate/docs/04-expert/01-implementing-a-decoder.md)
+- [Error Mitigation & Correction Overview](qoherence-mitigate/docs/error-mitigation.md)
+
+## qoherence-bench — measuring how good a quantum computer actually is
+
+- [What Is Benchmarking?](qoherence-bench/docs/01-beginner/01-what-is-benchmarking.md)
+- [Fidelity Metrics](qoherence-bench/docs/02-intermediate/01-fidelity-metrics.md)
+- [Benchmarking Across Backends](qoherence-bench/docs/03-advanced/01-benchmarking-across-backends.md)
+- [Resource Estimation](qoherence-bench/docs/03-advanced/02-resource-estimation.md): Azure Quantum Resource Estimator and friends.
+- [Statistical Rigor in Quantum Benchmarks](qoherence-bench/docs/04-expert/01-statistical-rigor-in-quantum-benchmarks.md)
+- [Benchmarking Overview](qoherence-bench/docs/benchmarking.md)
+
+## qoherence-docs — industry landscape, applications, and ethics
+
+- [The Quantum Computing Industry Landscape (2025–2026)](qoherence-docs/docs/industry-landscape.md)
+- [Applications by Industry](qoherence-docs/docs/applications-by-industry.md): cybersecurity/QKD, finance, chemistry/healthcare, logistics.
+- [Ethical, Societal, and Economic Implications](qoherence-docs/docs/ethics-and-society.md)
+- [Getting Started](qoherence-docs/docs/getting-started.md) and [Qoherence Architecture](qoherence-docs/docs/architecture.md)
+
+## qoherence-ai — quantum AI and quantum-inspired AI
+
+- [What Is Quantum AI?](qoherence-ai/docs/01-beginner/01-what-is-quantum-ai.md): the two branches — real quantum ML vs. quantum-inspired classical AI.
+- [How Classical Machine Learning Works (A Quick Recap)](qoherence-ai/docs/01-beginner/02-how-classical-ml-works-recap.md)
+- [Why Quantum Might Help AI (In Principle)](qoherence-ai/docs/01-beginner/03-why-quantum-might-help-ai.md)
+- [Variational Quantum Classifiers](qoherence-ai/docs/02-intermediate/01-variational-quantum-classifiers.md)
+- [Quantum Kernels](qoherence-ai/docs/02-intermediate/02-quantum-kernels.md)
+- [Quantum-Inspired Optimization (Annealing)](qoherence-ai/docs/02-intermediate/03-quantum-inspired-optimization.md)
+- [Tensor Networks for Machine Learning](qoherence-ai/docs/02-intermediate/04-tensor-networks-for-ml.md)
+- [Quantum Neural Networks](qoherence-ai/docs/03-advanced/01-quantum-neural-networks.md)
+- [Hybrid Quantum-Classical Training Loops](qoherence-ai/docs/03-advanced/02-hybrid-training-loops.md)
+- [The Barren Plateaus Problem](qoherence-ai/docs/03-advanced/03-barren-plateaus.md)
+- [Benchmarking QML vs. Classical AI](qoherence-ai/docs/03-advanced/04-benchmarking-qml-vs-classical.md)
+- [Industry Case Studies: Where Quantum AI Meets Real Business](qoherence-ai/docs/04-expert/01-industry-case-studies.md): logistics, supply chain, healthcare, fintech.
+- [Current Research Frontiers in Quantum AI](qoherence-ai/docs/04-expert/02-research-frontiers.md)
+- [Hype Check: Honest Limitations of Quantum AI](qoherence-ai/docs/04-expert/03-hype-check-and-limitations.md)
+- [Future Outlook: Where Quantum AI Is Headed](qoherence-ai/docs/04-expert/04-future-outlook.md): the current end of the trail.
+
+## Optional
+
+- [qoherence-core/CONTRIBUTING.md](qoherence-core/CONTRIBUTING.md), [qoherence-algorithms/CONTRIBUTING.md](qoherence-algorithms/CONTRIBUTING.md), [qoherence-hardware/CONTRIBUTING.md](qoherence-hardware/CONTRIBUTING.md), [qoherence-sim/CONTRIBUTING.md](qoherence-sim/CONTRIBUTING.md), [qoherence-mitigate/CONTRIBUTING.md](qoherence-mitigate/CONTRIBUTING.md), [qoherence-bench/CONTRIBUTING.md](qoherence-bench/CONTRIBUTING.md), [qoherence-docs/CONTRIBUTING.md](qoherence-docs/CONTRIBUTING.md): per-repo contribution notes, not core reading.

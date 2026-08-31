@@ -25,7 +25,7 @@ This field has a genuine, recurring credibility problem: "quantum supremacy" and
 The physicists who built quantum mechanics a century ago (`qoherence-core/docs/00-history-of-quantum-mechanics.md`) were resolving a scientific crisis about the nature of light and atoms — they had no way to know it would eventually raise questions about jobs, encryption, and public trust in scientific claims. That's a useful closing perspective for this whole repo: quantum computing is simultaneously some of the deepest, most abstract physics ever done, and an increasingly concrete matter of public policy — and taking it seriously means holding both of those at once.
 
 ## Next
-This is the final page of the trail. Return to the [Index](../../README.md) to revisit any part of the journey, or start again from `qoherence-core/docs/00-history-of-quantum-mechanics.md`.
+The trail continues into `qoherence-ai/` — quantum machine learning and quantum-inspired classical AI. Or return to the [Index](../../README.md) to revisit any part of the journey.
 
 ---
-**[◀ Applications by Industry](applications-by-industry.md)**  |  [Index](../../README.md)  |  *(end of the trail)*
+**[◀ Applications by Industry](applications-by-industry.md)**  |  [Index](../../README.md)  |  **[What Is Quantum AI? ▶](../../qoherence-ai/docs/01-beginner/01-what-is-quantum-ai.md)**
