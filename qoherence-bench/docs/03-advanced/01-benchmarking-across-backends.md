@@ -20,3 +20,9 @@ Comparing raw quantum hardware fidelity numbers across vendors without accountin
 
 ## Next
 Read `04-expert/01-statistical-rigor-in-quantum-benchmarks.md` for the statistical methodology (confidence intervals, sample size, hypothesis testing) that makes any of these comparisons trustworthy rather than anecdotal.
+
+## A Bit of History
+Cross-vendor quantum benchmarking got a very public real-world test in 2021 when IonQ became the first pure-play quantum hardware company to go public via a SPAC merger, forcing its performance claims — including its "algorithmic qubits" metric — into the kind of public, investor-facing scrutiny that academic benchmarking papers rarely attract. It marked a shift for the whole field: benchmarking disputes stopped being purely a conference-hallway argument between physicists and started having real stock-price consequences.
+
+---
+**[◀ Fidelity Metrics](../02-intermediate/01-fidelity-metrics.md)**  |  [Index](../../../README.md)  |  **[Statistical Rigor in Quantum Benchmarks ▶](../04-expert/01-statistical-rigor-in-quantum-benchmarks.md)**

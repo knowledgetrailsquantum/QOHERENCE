@@ -26,3 +26,9 @@ Which problems *does* it fit? Three buckets, roughly, worth knowing by name beca
 
 ## Next
 Read `04-expert/01-fault-tolerant-computation.md` to see what has to be true, physically and architecturally, before any of BQP's theoretical promise becomes practically realizable on error-prone hardware.
+
+## A Bit of History
+The complexity class BQP wasn't formally defined until 1993, by Ethan Bernstein and Umesh Vazirani — nearly two decades after Feynman's 1981 spark. Before that, nobody had a rigorous way to even ask "how much more powerful, precisely, is a quantum computer?" Bernstein and Vazirani's paper, along with a problem they invented specifically to have a provable quantum speedup, gave the field its first solid theoretical foothold — a reminder that quantum computing spent its first decade as much a question in mathematical logic as in physics or engineering.
+
+---
+**[◀ Density Matrices and Mixed States](02-density-matrices-and-mixed-states.md)**  |  [Index](../../../README.md)  |  **[Fault-Tolerant Computation ▶](../04-expert/01-fault-tolerant-computation.md)**

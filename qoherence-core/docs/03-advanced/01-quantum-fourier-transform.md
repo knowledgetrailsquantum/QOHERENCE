@@ -21,3 +21,9 @@ Because Shor's algorithm depends on the QFT, and Shor's algorithm threatens RSA/
 
 ## Next
 Read `02-density-matrices-and-mixed-states.md` for the formalism needed to describe real, noisy qubits — everything above assumed perfectly clean qubits, an idealization that breaks down the moment noise and decoherence enter the picture.
+
+## A Bit of History
+Peter Shor developed the algorithm that made the QFT famous in 1994, while working at Bell Labs — reportedly after a colleague, Umesh Vazirani, challenged him over a dinner conversation about whether quantum computers could do anything a classical computer provably couldn't. Shor's factoring algorithm, built on the QFT, is often cited as the single result that took quantum computing from an obscure academic curiosity to a topic of serious government and industry funding almost overnight, precisely because of what it implied for cryptography.
+
+---
+**[◀ Circuit Composition](../02-intermediate/03-circuit-composition.md)**  |  [Index](../../../README.md)  |  **[Density Matrices and Mixed States ▶](02-density-matrices-and-mixed-states.md)**

@@ -20,3 +20,9 @@ A state vector is like storing every point on a large, fully unfolded map indivi
 
 ## Next
 Read `04-expert/01-gpu-accelerated-simulation.md` for how both state-vector and tensor-network methods are accelerated using GPU hardware in practice.
+
+## A Bit of History
+Tensor networks didn't originate in quantum computing at all — they trace to condensed-matter physics in the 1990s-2000s, particularly work by Guifré Vidal and Steven White on efficiently describing 1D quantum materials (an idea called the Density Matrix Renormalization Group, developed by White in 1992). Quantum computing adopted the machinery wholesale roughly a decade later, once researchers realized the same compact representation that worked for describing real materials also worked for simulating quantum circuits classically — a rare case of one physics subfield's toolkit quietly rescuing another's.
+
+---
+**[◀ State-Vector Simulation Limits](../02-intermediate/01-state-vector-limits.md)**  |  [Index](../../../README.md)  |  **[GPU-Accelerated Simulation ▶](../04-expert/01-gpu-accelerated-simulation.md)**

@@ -37,3 +37,9 @@ IBM's, Google's, and Microsoft's quantum roadmaps are all, underneath the market
 
 ## Next
 Read `03-gates-and-circuits.md` to see the actual operations (H, X, CNOT, and friends) that create and manipulate superposition and entanglement.
+
+## A Bit of History
+Albert Einstein hated entanglement so much he gave it a name meant as an insult: "spukhafte Fernwirkung" — "spooky action at a distance" — in a 1935 paper written with Boris Podolsky and Nathan Rosen (the famous EPR paper), arguing quantum mechanics had to be an incomplete theory because it allowed something so strange. It took until 1964 for physicist John Bell to devise a way to actually test who was right, and until the 1970s-2010s for experiments (culminating in a 2022 Nobel Prize for Alain Aspect, John Clauser, and Anton Zeilinger) to settle it decisively: entanglement is real, and Einstein — usually right about everything — was wrong about this one.
+
+---
+**[◀ What Is a Qubit?](01-what-is-a-qubit.md)**  |  [Index](../../../README.md)  |  **[Gates and Circuits ▶](03-gates-and-circuits.md)**

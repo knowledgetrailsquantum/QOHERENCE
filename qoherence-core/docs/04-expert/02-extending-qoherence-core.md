@@ -26,3 +26,9 @@ If you're contributing noise-aware simulation (rather than pure error-free execu
 
 ## Contributing
 See `CONTRIBUTING.md` in this repo's root for process; conceptually, contributions that add physical realism (noise models, connectivity constraints) belong here or in `qoherence-hardware`/`qoherence-mitigate` depending on whether they're about *representing* physical constraints (core/hardware) or *compensating* for them (mitigate).
+
+## A Bit of History
+Software separation-of-concerns — circuit construction kept apart from execution kept apart from noise-handling — is a lesson quantum software borrowed directly from classical software engineering's own hard-won history: early operating systems that tangled hardware drivers, applications, and user interfaces together became famously unmaintainable, which is exactly why 1960s-70s computer science developed layered, modular design as a discipline in the first place. Qiskit, Cirq, and this repo all inherit that decades-older lesson, applied to a much stranger kind of hardware.
+
+---
+**[◀ Fault-Tolerant Computation](01-fault-tolerant-computation.md)**  |  [Index](../../../README.md)  |  **[Why Simulate Quantum Computers? ▶](../../../qoherence-sim/docs/01-beginner/01-why-simulate-quantum-computers.md)**

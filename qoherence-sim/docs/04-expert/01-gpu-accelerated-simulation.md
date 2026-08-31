@@ -19,3 +19,9 @@ GPU acceleration primarily speeds up the *arithmetic* of simulation — it doesn
 
 ## Next
 See `qoherence-bench/docs` for how to rigorously and reproducibly benchmark simulator and real-hardware performance.
+
+## A Bit of History
+GPUs were designed in the 1990s purely to push pixels for video games — Nvidia coined the term "GPU" itself in 1999 for the GeForce 256. Their re-purposing for scientific and quantum computing decades later, via general-purpose GPU computing frameworks like CUDA (2007) and eventually cuQuantum (2021), is one of computing's odder success stories: a chip built to render Quake and Doom ended up accelerating the simulation of some of the strangest physics ever discovered.
+
+---
+**[◀ Tensor Network Methods](../03-advanced/01-tensor-network-methods.md)**  |  [Index](../../../README.md)  |  **[Why Algorithms Need Quantum ▶](../../../qoherence-algorithms/docs/01-beginner/01-why-algorithms-need-quantum.md)**

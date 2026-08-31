@@ -20,3 +20,9 @@ Even as real hardware improves, better classical simulators remain commercially 
 
 ## Next
 Read `02-intermediate/01-state-vector-limits.md` for the precise memory math behind why state-vector simulation caps out where it does.
+
+## A Bit of History
+The first serious quantum circuit simulators date to the early-to-mid 1990s, built by researchers who had no quantum hardware to test their new algorithms on at all — Shor famously verified his own factoring algorithm's logic through pencil-and-paper reasoning and small classical simulations, because no qubit anyone could build yet existed. For roughly the field's first two decades, simulation wasn't a supporting tool alongside real hardware — it was the *only* way anyone could check whether a quantum algorithm idea actually worked.
+
+---
+**[◀ Extending qoherence-core](../../../qoherence-core/docs/04-expert/02-extending-qoherence-core.md)**  |  [Index](../../../README.md)  |  **[State-Vector Simulation Limits ▶](../02-intermediate/01-state-vector-limits.md)**

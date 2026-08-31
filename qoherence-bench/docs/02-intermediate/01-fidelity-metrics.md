@@ -24,3 +24,9 @@ Read this as "sandwich the actual, messy output between the ideal target's bra a
 
 ## Next
 Read `03-advanced/01-benchmarking-across-backends.md` for how to make these fidelity comparisons fair when comparing genuinely different hardware platforms.
+
+## A Bit of History
+Randomized benchmarking, now the industry-standard way to report gate fidelity, was developed in the mid-2000s by Emanuel Knill and colleagues at NIST — notably, the same U.S. national laboratory where Wineland and Monroe had trapped the first single qubit a decade earlier. It's a small but telling pattern in this field's history: the same handful of institutions (NIST, IBM, Bell Labs, a cluster of universities) keep reappearing at nearly every major turning point, across topics as different as trapping ions and inventing statistical benchmarks.
+
+---
+**[◀ What Is Benchmarking?](../01-beginner/01-what-is-benchmarking.md)**  |  [Index](../../../README.md)  |  **[Benchmarking Across Backends ▶](../03-advanced/01-benchmarking-across-backends.md)**

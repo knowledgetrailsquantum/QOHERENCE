@@ -22,3 +22,9 @@ As of 2025–2026, essentially all commercially-marketed "quantum advantage" pil
 
 ## Next
 Read `02-intermediate/01-grover-and-shor-explained.md` for how Grover's and Shor's algorithms actually work step by step.
+
+## A Bit of History
+The term "NISQ" (Noisy Intermediate-Scale Quantum) — the era this whole doc set situates most of today's practical algorithms in — was coined by physicist John Preskill in a single influential 2018 paper, less than a decade before this repo was written. Preskill wasn't just naming an era; he was making a deliberately sobering argument, at a moment when quantum-computing hype was accelerating, that useful, error-corrected quantum computers were still a long way off, and researchers should plan their algorithms around noisy near-term devices instead.
+
+---
+**[◀ GPU-Accelerated Simulation](../../../qoherence-sim/docs/04-expert/01-gpu-accelerated-simulation.md)**  |  [Index](../../../README.md)  |  **[Grover's and Shor's Algorithms Explained ▶](../02-intermediate/01-grover-and-shor-explained.md)**

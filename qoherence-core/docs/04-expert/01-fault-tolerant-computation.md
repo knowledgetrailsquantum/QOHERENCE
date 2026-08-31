@@ -24,3 +24,9 @@ The payoff, if this all works: a mathematical guarantee (the threshold theorem, 
 
 ## Next
 Read `02-extending-qoherence-core.md` for how to extend this library's data structures, and `qoherence-mitigate/docs` for the error-correction techniques referenced throughout this doc in depth.
+
+## A Bit of History
+For years after Shor's 1994 algorithm, many physicists assumed quantum error correction was simply impossible — the no-cloning theorem seemed to rule out any form of backup, and noise seemed certain to overwhelm any real device. That pessimism broke in 1995-96, when Peter Shor (again) and, independently, Andrew Steane each showed how to encode a logical qubit redundantly without ever cloning it. The threshold theorem followed within a couple of years, proving error correction could work in principle if physical qubits were good enough — turning "quantum computing is fundamentally impossible at scale" into an engineering problem instead of a law of nature.
+
+---
+**[◀ Complexity Theory for Quantum Computing](../03-advanced/03-complexity-theory.md)**  |  [Index](../../../README.md)  |  **[Extending qoherence-core ▶](02-extending-qoherence-core.md)**

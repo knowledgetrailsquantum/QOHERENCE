@@ -45,3 +45,9 @@ print(len(result.amplitudes))  # 16 -- this is 2**4, growing exponentially with 
 
 ## Next
 Read `02-linear-algebra-foundations.md` for the matrix mechanics underneath all of this.
+
+## A Bit of History
+Richard Feynman is usually credited with the spark that started it all: in a now-famous 1981 keynote at MIT titled "Simulating Physics with Computers," he pointed out that simulating quantum systems on classical computers seemed to require exponentially growing resources, and asked, half rhetorically, whether nature itself might be doing something computers couldn't efficiently copy. "Nature isn't classical, dammit," he told the room, "and if you want to make a simulation of nature, you'd better make it quantum mechanical." That offhand challenge is widely seen as the moment quantum computing became a field people worked on, rather than a curiosity.
+
+---
+**[◀ Gates and Circuits](../01-beginner/03-gates-and-circuits.md)**  |  [Index](../../../README.md)  |  **[Linear Algebra Foundations ▶](02-linear-algebra-foundations.md)**

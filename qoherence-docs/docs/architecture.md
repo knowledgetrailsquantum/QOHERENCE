@@ -29,3 +29,9 @@ This layered structure deliberately mirrors how production quantum software stac
 
 ## Next
 See `getting-started.md` for how to set up and run your first circuit across this stack, `LEARNING-PATH.md` (repo root) for the recommended reading order through all the docs tiers, and `industry-landscape.md` for how this maps onto the real-world quantum computing industry.
+
+## A Bit of History
+Layered software architecture — keeping circuit construction, execution, and post-processing in separate, swappable pieces — is a design lesson the whole software industry learned the hard way, well before quantum computing existed: the ARPANET's 1970s designers split networking into layers for exactly this reason, a decision that let the internet's lower layers (cables, then fiber, then wireless) evolve for fifty years without breaking the applications running on top. This repo's six-part split is a very direct descendant of that decades-old networking lesson.
+
+---
+**[◀ Statistical Rigor in Quantum Benchmarks](../../qoherence-bench/docs/04-expert/01-statistical-rigor-in-quantum-benchmarks.md)**  |  [Index](../../README.md)  |  **[Getting Started ▶](getting-started.md)**

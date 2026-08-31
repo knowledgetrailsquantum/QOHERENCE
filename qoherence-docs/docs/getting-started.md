@@ -34,3 +34,9 @@ If you see anything other than roughly a 50/50 split between "00" and "11" on an
 
 ## Next
 `industry-landscape.md` in this repo ties every technical concept above back to specific companies, products, and public milestones from IBM, Google, Microsoft, IonQ, Quantinuum, Rigetti, Amazon, and others.
+
+## A Bit of History
+Running a Bell pair as the first thing anyone tries on a new quantum system or piece of software is itself a small tradition with real history: it's essentially been the field's "hello, world" since IBM opened its first public quantum computer in 2016, and countless papers, tutorials, and now this repo, all start the exact same two-line way — Hadamard, then CNOT — echoing across nearly a decade of quantum computing education.
+
+---
+**[◀ Qoherence Architecture](architecture.md)**  |  [Index](../../README.md)  |  **[The Quantum Computing Industry Landscape ▶](industry-landscape.md)**

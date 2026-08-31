@@ -21,3 +21,9 @@ Two circuits that are logically identical can have wildly different **transpiled
 
 ## Next
 Read `04-expert/01-building-a-custom-backend.md` for how `qoherence-hardware`'s backend adapter interfaces (`src/ibm_backend.py`, `src/ionq_backend.py`, `src/rigetti_backend.py`) map circuits to specific real vendor APIs.
+
+## A Bit of History
+IBM's heavy-hex lattice — the specific connectivity pattern referenced throughout this repo — was only introduced publicly in 2020, a relatively recent design choice compared to much of the physics underlying this field. It replaced earlier, more densely-connected chip layouts specifically because IBM's engineers found the extra connections were causing more cross-talk noise than they were worth in useful circuit routing — a reminder that hardware design in this field is still actively evolving through fairly recent, hard-won trial and error, not settled decades ago.
+
+---
+**[◀ Qubit Technologies Compared](../02-intermediate/01-qubit-technologies.md)**  |  [Index](../../../README.md)  |  **[Building a Custom Backend ▶](../04-expert/01-building-a-custom-backend.md)**

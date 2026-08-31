@@ -33,3 +33,9 @@ print(np.allclose(H.conj().T @ H, np.eye(2)))  # True
 
 ## Next
 Read `03-circuit-composition.md` to see how these matrix operations combine into larger, reusable circuit building blocks.
+
+## A Bit of History
+The bra-ket notation used throughout this repo — `⟨φ|ψ⟩`, splitting a state into a "bra" and a "ket" — was invented by Paul Dirac in 1939, who noticed the English word "bracket" split neatly into two halves if you cut it in the middle. It's a small, almost playful piece of notation that turned out to make quantum mechanics' underlying linear algebra dramatically easier to write and reason about, and every working physicist has used Dirac's pun, usually without a second thought, ever since.
+
+---
+**[◀ Multi-Qubit Systems](01-multi-qubit-systems.md)**  |  [Index](../../../README.md)  |  **[Circuit Composition ▶](03-circuit-composition.md)**

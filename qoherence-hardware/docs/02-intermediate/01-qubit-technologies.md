@@ -44,3 +44,9 @@ No platform is strictly better than the others across every dimension — this i
 
 ## Next
 Read `03-advanced/01-connectivity-and-transpilation.md` for how a circuit's *logical* qubit connectivity gets mapped onto a real chip's *physical* connectivity constraints.
+
+## A Bit of History
+Superconducting qubits owe an unlikely intellectual debt to work on Josephson junctions — a superconducting circuit element discovered theoretically in 1962 by 22-year-old graduate student Brian Josephson, who received the 1973 Nobel Prize for it. Josephson wasn't thinking about computing at all; his junctions were originally of interest for ultra-precise voltage standards and magnetic field sensors. Decades later, they became the literal building block inside every IBM and Google quantum chip's "artificial atom" qubits.
+
+---
+**[◀ What Is Real Quantum Hardware?](../01-beginner/01-what-is-real-quantum-hardware.md)**  |  [Index](../../../README.md)  |  **[Connectivity and Transpilation ▶](../03-advanced/01-connectivity-and-transpilation.md)**

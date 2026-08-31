@@ -22,3 +22,9 @@ Before trusting a new adapter's results, validate it against small circuits with
 
 ## Next
 See `qoherence-bench/docs` for the rigorous, statistically sound methodology for comparing backend performance once your adapter is validated.
+
+## A Bit of History
+IBM opened the first real quantum computer to the public over the internet in May 2016 — a modest 5-qubit device, free for anyone to use via what became the IBM Quantum Experience. It was a genuinely unusual move in the history of new computing technology: rather than guarding an expensive, fragile prototype, IBM let total strangers around the world run their own circuits on it from day one, seeding an entire generation of quantum software developers years before quantum computers did anything commercially useful.
+
+---
+**[◀ Connectivity and Transpilation](../03-advanced/01-connectivity-and-transpilation.md)**  |  [Index](../../../README.md)  |  **[Why Quantum Computers Need Error Handling ▶](../../../qoherence-mitigate/docs/01-beginner/01-why-quantum-computers-need-error-handling.md)**

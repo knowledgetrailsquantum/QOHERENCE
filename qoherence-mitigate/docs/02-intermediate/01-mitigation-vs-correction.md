@@ -24,3 +24,9 @@ If your circuit is shallow enough that mitigation's extra-run overhead is afford
 
 ## Next
 Read `03-advanced/01-stabilizer-codes.md` for how the surface code — the leading practical error-correcting code — actually works.
+
+## A Bit of History
+Zero-noise extrapolation has origins outside quantum computing entirely — a similar extrapolate-to-zero technique (Richardson extrapolation) was devised by Lewis Fry Richardson in 1911 for an entirely different problem: improving numerical weather-prediction calculations done, at the time, entirely by hand. It took over a century for quantum error mitigation researchers, facing their own version of "how do I get a cleaner answer out of an imperfect calculation," to rediscover essentially the same mathematical idea.
+
+---
+**[◀ Why Quantum Computers Need Error Handling](../01-beginner/01-why-quantum-computers-need-error-handling.md)**  |  [Index](../../../README.md)  |  **[Stabilizer Codes ▶](../03-advanced/01-stabilizer-codes.md)**

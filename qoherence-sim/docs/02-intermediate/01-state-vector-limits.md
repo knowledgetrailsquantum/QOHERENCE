@@ -25,3 +25,9 @@ This ceiling shifts upward over time as hardware improves (more RAM, GPU acceler
 
 ## Next
 Read `03-advanced/01-tensor-network-methods.md` for how circuits with limited entanglement can be simulated far beyond this ~30-50 qubit wall, by exploiting structure rather than fighting the raw exponential head-on.
+
+## A Bit of History
+In 2019, ahead of Google's supremacy announcement, IBM researchers published a rebuttal arguing a supposedly 10,000-year classical simulation could instead run in about 2.5 days on the Summit supercomputer using clever disk-and-memory techniques — the two teams never fully resolved the disagreement in public, but it's a vivid, real example of exactly the classical/quantum boundary-pushing this doc describes, playing out between two of the industry's biggest rivals in real time rather than as abstract theory.
+
+---
+**[◀ Why Simulate Quantum Computers?](../01-beginner/01-why-simulate-quantum-computers.md)**  |  [Index](../../../README.md)  |  **[Tensor Network Methods ▶](../03-advanced/01-tensor-network-methods.md)**

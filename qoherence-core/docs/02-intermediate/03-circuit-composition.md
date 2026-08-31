@@ -40,3 +40,9 @@ This reversibility-first, no-implicit-information-loss design philosophy is bake
 
 ## Next
 Read `03-advanced/01-quantum-fourier-transform.md` — the QFT is the most important reusable subcircuit block in quantum computing, underlying Shor's algorithm, phase estimation, and much of quantum signal processing.
+
+## A Bit of History
+The idea that computation must be built from reversible operations traces to physicist Charles Bennett's 1973 discovery that classical computers could, in principle, be made fully reversible too — before anyone was thinking about qubits at all. Bennett showed that even ordinary irreversible logic gates like AND could be simulated reversibly by keeping (and later erasing) extra "scratch" bits — precisely the ancilla-and-uncompute pattern this doc describes. Quantum computing didn't invent reversible computing; it inherited a requirement classical engineers had cheerfully ignored for decades, because their transistors never had to obey it.
+
+---
+**[◀ Linear Algebra Foundations](02-linear-algebra-foundations.md)**  |  [Index](../../../README.md)  |  **[Quantum Fourier Transform ▶](../03-advanced/01-quantum-fourier-transform.md)**

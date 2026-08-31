@@ -19,3 +19,9 @@ MWPM assumes independent, relatively simple error models and can be suboptimal f
 
 ## Next
 See `qoherence-bench/docs` for how to rigorously benchmark decoder accuracy, latency, and overall system fidelity.
+
+## A Bit of History
+Minimum-weight perfect matching, the classic surface-code decoding algorithm, wasn't invented for quantum computing at all — the underlying matching problem was solved efficiently in 1965 by mathematician Jack Edmonds, in a paper about scheduling and assignment problems that has nothing to do with physics. Edmonds' algorithm sat in classical computer science textbooks for over three decades before quantum error-correction researchers realized it was exactly the tool needed to decode syndrome measurements.
+
+---
+**[◀ Stabilizer Codes](../03-advanced/01-stabilizer-codes.md)**  |  [Index](../../../README.md)  |  **[What Is Benchmarking? ▶](../../../qoherence-bench/docs/01-beginner/01-what-is-benchmarking.md)**

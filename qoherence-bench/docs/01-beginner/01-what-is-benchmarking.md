@@ -16,3 +16,9 @@ Every major vendor (IBM, Google, IonQ, Quantinuum, Rigetti) publishes benchmark 
 
 ## Next
 Read `02-intermediate/01-fidelity-metrics.md` for the specific mathematical definitions of fidelity used to quantify "how close to ideal" a real result is.
+
+## A Bit of History
+IBM's "quantum volume" metric, now one of the field's standard yardsticks, was only introduced in 2017 — proposed by IBM researchers specifically because they'd noticed rival companies and academic groups touting raw qubit counts in ways that were, at best, not comparable and, at worst, actively misleading. It's a young metric by the standards of this book's history, invented explicitly to bring some honesty to an increasingly noisy public conversation about progress.
+
+---
+**[◀ Implementing a Decoder](../../../qoherence-mitigate/docs/04-expert/01-implementing-a-decoder.md)**  |  [Index](../../../README.md)  |  **[Fidelity Metrics ▶](../02-intermediate/01-fidelity-metrics.md)**

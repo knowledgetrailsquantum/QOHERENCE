@@ -63,3 +63,9 @@ result = c.run()  # execute against the internal state vector
 
 ## Next
 Read `02-intermediate/01-multi-qubit-systems.md` to see how these ideas scale beyond two or three qubits, and where the exponential state space starts to bite.
+
+## A Bit of History
+The Hadamard gate is named after French mathematician Jacques Hadamard, who died in 1963 — a decade before anyone was building quantum circuits. He never worked on quantum computing; the "Hadamard matrix" pattern he studied in 1893 for an entirely different problem (matrix determinants) turned out, nearly a century later, to be exactly the mathematical shape needed to put a qubit into perfect superposition. It's one of quantum computing's odder debts to 19th-century pure mathematics that had no application in mind at all.
+
+---
+**[◀ Superposition and Entanglement](02-superposition-and-entanglement.md)**  |  [Index](../../../README.md)  |  **[Multi-Qubit Systems ▶](../02-intermediate/01-multi-qubit-systems.md)**

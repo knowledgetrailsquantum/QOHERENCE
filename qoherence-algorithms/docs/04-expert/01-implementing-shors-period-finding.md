@@ -25,3 +25,9 @@ Shor's algorithm is a **probabilistic** algorithm — a given run may fail to yi
 
 ## Next
 See `qoherence-hardware/docs` for how circuits like this one get compiled down to real device constraints, and `qoherence-mitigate/docs` for the error-handling techniques that partially compensate for noise on today's hardware.
+
+## A Bit of History
+The first-ever hardware demonstration of Shor's algorithm ran in 2001 at IBM, factoring the number 15 (into 3 and 5) using a 7-qubit nuclear magnetic resonance system — a genuine milestone, though later criticized because the circuit had effectively been simplified using foreknowledge of the answer. More than two decades later, factoring numbers that small remains largely a demonstration exercise; the resource estimates in this doc for factoring a real 2048-bit RSA key show just how far that 2001 proof-of-concept still sits from a cryptographically meaningful result.
+
+---
+**[◀ VQE and QAOA Theory](../03-advanced/01-vqe-and-qaoa-theory.md)**  |  [Index](../../../README.md)  |  **[What Is Real Quantum Hardware? ▶](../../../qoherence-hardware/docs/01-beginner/01-what-is-real-quantum-hardware.md)**

@@ -27,3 +27,9 @@ Both algorithms are called **variational** because they search over a *family* o
 
 ## Next
 Read `04-expert/01-implementing-shors-period-finding.md` for a detailed circuit-level walkthrough of Shor's algorithm's most technically demanding subroutine.
+
+## A Bit of History
+VQE was introduced in 2014 by a team including Alberto Peruzzo and Alán Aspuru-Guzmán, who ran it on an early photonic quantum processor with just two qubits — a toy demonstration by today's standards, but the first real experimental proof that the hybrid quantum-classical loop this doc describes actually worked outside of theory. QAOA followed a year later, in 2014-2015, from Edward Farhi, Jeffrey Goldstone, and Sam Gutmann at MIT, explicitly designed from the outset for exactly the noisy, near-term hardware Preskill would name "NISQ" a few years later.
+
+---
+**[◀ Grover's and Shor's Algorithms Explained](../02-intermediate/01-grover-and-shor-explained.md)**  |  [Index](../../../README.md)  |  **[Implementing Shor's Period-Finding ▶](../04-expert/01-implementing-shors-period-finding.md)**

@@ -21,3 +21,9 @@ IBM's research into **quantum LDPC codes** (particularly its 2023–2024 "bivari
 
 ## Next
 Read `04-expert/01-implementing-a-decoder.md` for how the classical algorithm that interprets syndrome measurements and decides what correction to apply actually works.
+
+## A Bit of History
+The surface code, now the field's leading practical error-correction candidate, was actually proposed years before most of the hardware that would need it existed — by Alexei Kitaev in 1997 and further developed by Sergey Bravyi, along with Eric Dennis, Alexei Kitaev, Andrew Landahl, and John Preskill in the early 2000s. For most of its first two decades, the surface code was a purely theoretical construct with no chip capable of testing it; Google's 2024 Willow result was, in a real sense, the experimental payoff of a 25-plus-year-old theoretical bet.
+
+---
+**[◀ Mitigation vs. Correction](../02-intermediate/01-mitigation-vs-correction.md)**  |  [Index](../../../README.md)  |  **[Implementing a Decoder ▶](../04-expert/01-implementing-a-decoder.md)**

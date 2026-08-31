@@ -34,3 +34,9 @@ Superconducting qubits (IBM, Google, Rigetti) typically report T1/T2 in the tens
 
 ## Next
 Read `03-complexity-theory.md` to see how these physical realities connect to the theoretical question of *what* quantum computers can and can't speed up — and why "quantum computers solve every hard problem instantly" is a popular myth this doc will debunk.
+
+## A Bit of History
+The density matrix was introduced independently by two of quantum mechanics' founders working separately in 1927: John von Neumann and Lev Landau, then a 19-year-old student in Soviet Leningrad. Von Neumann needed it to put quantum statistical mechanics on rigorous mathematical footing; Landau, unaware of von Neumann's work, arrived at essentially the same tool while thinking about how to describe part of a larger quantum system. Nearly a century later it's the standard way to describe exactly the kind of real-world noisy qubit this repo's `qoherence-mitigate` module exists to fight.
+
+---
+**[◀ Quantum Fourier Transform](01-quantum-fourier-transform.md)**  |  [Index](../../../README.md)  |  **[Complexity Theory for Quantum Computing ▶](03-complexity-theory.md)**

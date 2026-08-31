@@ -19,3 +19,9 @@ Ideally, running the Bell-pair circuit from `qoherence-core/docs/01-beginner/02-
 
 ## Next
 Read `02-intermediate/01-mitigation-vs-correction.md` for a deeper technical comparison of these two strategies and when each is used in practice.
+
+## A Bit of History
+For a few years after Shor's 1994 breakthrough, a number of prominent physicists, including some who had helped found quantum mechanics itself, publicly doubted quantum computing could ever work at meaningful scale, precisely because of the noise problem this doc describes — the doubt was serious enough that it became known informally among researchers as the "decoherence problem" standing between theory and any real machine. The error-correction breakthroughs of 1995-97 (see `qoherence-core/docs/04-expert/01-fault-tolerant-computation.md`) are what turned that widespread skepticism around.
+
+---
+**[◀ Building a Custom Backend](../../../qoherence-hardware/docs/04-expert/01-building-a-custom-backend.md)**  |  [Index](../../../README.md)  |  **[Mitigation vs. Correction ▶](../02-intermediate/01-mitigation-vs-correction.md)**

@@ -31,3 +31,9 @@ Grover's algorithm searching 1 million items: classically up to 1,000,000 checks
 
 ## Next
 Read `03-advanced/01-vqe-and-qaoa-theory.md` for the algorithms that are actually being piloted on today's hardware.
+
+## A Bit of History
+Lov Grover published his search algorithm in 1996, two years after Shor's factoring algorithm, and reportedly had to fight to get it taken seriously at first — a mere quadratic speedup seemed unglamorous next to Shor's exponential one. History proved Grover's contribution had a different kind of staying power: because it applies to *any* unstructured search problem rather than one specific number-theoretic trick, variants of Grover's algorithm show up as a subroutine inside a huge fraction of quantum algorithms devised since, making it arguably the more broadly influential of the two, even if it's less famous outside the field.
+
+---
+**[◀ Why Algorithms Need Quantum](../01-beginner/01-why-algorithms-need-quantum.md)**  |  [Index](../../../README.md)  |  **[VQE and QAOA Theory ▶](../03-advanced/01-vqe-and-qaoa-theory.md)**

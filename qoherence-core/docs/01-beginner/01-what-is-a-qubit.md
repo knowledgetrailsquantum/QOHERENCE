@@ -44,3 +44,9 @@ As of 2025–2026, qubit counts on the flashiest chips (IBM's Condor-class and H
 
 ## Next
 Read `02-superposition-and-entanglement.md` — superposition on its own is interesting, but it's what happens when *multiple* qubits interact that gives quantum computers their power.
+
+## A Bit of History
+The word "qubit" was coined in 1995 by physicist Benjamin Schumacher, who needed a short name for "quantum bit" while writing a paper on quantum data compression — reportedly suggested to him in conversation by William Wootters. It stuck instantly, the way "bit" (itself coined by statistician John Tukey in 1947, popularized by Claude Shannon) had decades earlier. Both words did the same job: giving an entire field a one-syllable unit to build sentences around.
+
+---
+*(start of the trail)*  |  [Index](../../../README.md)  |  **[Superposition and Entanglement ▶](02-superposition-and-entanglement.md)**
