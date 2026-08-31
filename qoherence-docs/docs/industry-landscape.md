@@ -31,4 +31,4 @@ When reading quantum computing news, the qoherence repos' recurring themes are t
 See `qoherence-core/docs/04-expert/01-fault-tolerant-computation.md` for the technical detail behind the fault-tolerance timeline referenced throughout, and the repo root's `LEARNING-PATH.md` for the full recommended reading order across all six repos.
 
 ---
-**[◀ Getting Started](getting-started.md)**  |  [Index](../../README.md)  |  *(end of the trail)*
+**[◀ Getting Started](getting-started.md)**  |  [Index](../../README.md)  |  **[Applications by Industry ▶](applications-by-industry.md)**

@@ -26,4 +26,4 @@ Read `02-density-matrices-and-mixed-states.md` for the formalism needed to descr
 Peter Shor developed the algorithm that made the QFT famous in 1994, while working at Bell Labs — reportedly after a colleague, Umesh Vazirani, challenged him over a dinner conversation about whether quantum computers could do anything a classical computer provably couldn't. Shor's factoring algorithm, built on the QFT, is often cited as the single result that took quantum computing from an obscure academic curiosity to a topic of serious government and industry funding almost overnight, precisely because of what it implied for cryptography.
 
 ---
-**[◀ Circuit Composition](../02-intermediate/03-circuit-composition.md)**  |  [Index](../../../README.md)  |  **[Density Matrices and Mixed States ▶](02-density-matrices-and-mixed-states.md)**
+**[◀ Reversible Computing](../02-intermediate/04-reversible-computing.md)**  |  [Index](../../../README.md)  |  **[Phase Estimation ▶](04-phase-estimation.md)**

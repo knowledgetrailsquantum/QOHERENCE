@@ -27,4 +27,4 @@ This is the final tier of qoherence-bench's docs. See `qoherence-docs/docs/archi
 The statistical methods this doc leans on — confidence intervals, hypothesis testing, corrections for running many comparisons at once — mostly predate quantum computing by a century; the two-proportion z-test and Bonferroni-style corrections trace to statisticians like Karl Pearson and Carlo Bonferroni working in the early-to-mid 1900s on entirely unrelated problems, from genetics to actuarial tables. Quantum benchmarking didn't need to invent new statistics; it needed to remember to actually use the old ones rigorously, which — as several retracted or revised early quantum-advantage claims have shown — isn't automatic even among trained physicists.
 
 ---
-**[◀ Benchmarking Across Backends](../03-advanced/01-benchmarking-across-backends.md)**  |  [Index](../../../README.md)  |  **[Qoherence Architecture ▶](../../../qoherence-docs/docs/architecture.md)**
+**[◀ Resource Estimation](../03-advanced/02-resource-estimation.md)**  |  [Index](../../../README.md)  |  **[Qoherence Architecture ▶](../../../qoherence-docs/docs/architecture.md)**

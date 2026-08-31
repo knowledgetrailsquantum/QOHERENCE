@@ -25,4 +25,4 @@ Read `02-intermediate/01-qubit-technologies.md` for a detailed comparison of the
 The very first working qubit was demonstrated in 1995 by Chris Monroe and David Wineland at NIST, trapping a single beryllium ion — Wineland would go on to share the 2012 Nobel Prize in Physics for this and related work on controlling individual quantum systems. It's a useful anchor point: from that single laboratory ion to today's chips with over a thousand qubits took roughly three decades, a pace that looks glacial next to classical computing's transistor scaling, and is a big part of why hardware, not algorithms, is this field's real bottleneck.
 
 ---
-**[◀ Implementing Shor's Period-Finding](../../../qoherence-algorithms/docs/04-expert/01-implementing-shors-period-finding.md)**  |  [Index](../../../README.md)  |  **[Qubit Technologies Compared ▶](../02-intermediate/01-qubit-technologies.md)**
+**[◀ A Worked Example: Grover's on N-Queens](../../../qoherence-algorithms/docs/04-expert/02-worked-example-grover-n-queens.md)**  |  [Index](../../../README.md)  |  **[Qubit Technologies Compared ▶](../02-intermediate/01-qubit-technologies.md)**

@@ -39,4 +39,4 @@ Read `03-complexity-theory.md` to see how these physical realities connect to th
 The density matrix was introduced independently by two of quantum mechanics' founders working separately in 1927: John von Neumann and Lev Landau, then a 19-year-old student in Soviet Leningrad. Von Neumann needed it to put quantum statistical mechanics on rigorous mathematical footing; Landau, unaware of von Neumann's work, arrived at essentially the same tool while thinking about how to describe part of a larger quantum system. Nearly a century later it's the standard way to describe exactly the kind of real-world noisy qubit this repo's `qoherence-mitigate` module exists to fight.
 
 ---
-**[◀ Quantum Fourier Transform](01-quantum-fourier-transform.md)**  |  [Index](../../../README.md)  |  **[Complexity Theory for Quantum Computing ▶](03-complexity-theory.md)**
+**[◀ Phase Estimation](04-phase-estimation.md)**  |  [Index](../../../README.md)  |  **[Complexity Theory for Quantum Computing ▶](03-complexity-theory.md)**
